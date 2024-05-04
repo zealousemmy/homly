@@ -17,8 +17,19 @@ const HowItWorksTwo = () => {
           creator experiences, together moments and much more.
         </p>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center relative">
+        <div className="absolute z-[-1] h-[inherit] w-[1440px] right-0 top-0">
+          <img
+            className="w-[100%]  h-[588px]"
+            src="/images/Frame 1000004787.svg"
+            alt=""
+          />
+        </div>
+
         <div>
+          <img src="/images/Group 1000002698.svg" alt="" />
+        </div>
+        {/* <div>
           <img src="/images/Nokia XR21.png" alt="" />
         </div>
         <div>
@@ -29,7 +40,7 @@ const HowItWorksTwo = () => {
         </div>
         <div>
           <img src="/images/Nokia XR21.png" alt="" />
-        </div>
+        </div> */}
       </div>
       <div className="w-[334px] mx-auto my-[2rem] ">
         <button

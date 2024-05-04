@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hero = () => {
+const Hero = ({ handlePayHere }) => {
   return (
     <div
       className="relative mt-[6rem]"
@@ -31,7 +31,10 @@ const Hero = () => {
             >
               Book a call
             </button>
-            <button className="bg-transparent border-[2px] border-[#000000] mx-[1rem] text-[#000000] font-bold py-[12px] px-4 rounded-[50px]">
+            <button
+              onClick={handlePayHere}
+              className="bg-transparent border-[2px] border-[#000000] mx-[1rem] text-[#000000] font-bold py-[12px] px-4 rounded-[50px]"
+            >
               Pay Here
             </button>
           </div>

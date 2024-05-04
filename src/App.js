@@ -12,12 +12,23 @@ import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
 import YourSecurity from "./components/YourSecurity";
 import MeetTheTeam from "./components/MeetTheTeam";
+import { useState } from "react";
+import Modal from "./components/Modal";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div>
       <Navbar />
-      <Hero />
+      <Hero handlePayHere={openModal} />
       <SectionOne />
       <NewApproach />
       <HowItWorks />
@@ -28,6 +39,7 @@ function App() {
       <AboutUs />
       <MeetTheTeam />
       <Footer />
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }
